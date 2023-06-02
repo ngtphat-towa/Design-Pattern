@@ -1,6 +1,7 @@
 package Chapter_03_DECORATOR.StarBuzz.CondimentDecorators;
 
 import Chapter_03_DECORATOR.StarBuzz.Beverages.Beverage;
+import Chapter_03_DECORATOR.StarBuzz.Beverages.DrinkSize;
 
 public class Mocha extends CondimentDecorator {
     Beverage beverage;
@@ -14,6 +15,6 @@ public class Mocha extends CondimentDecorator {
     }
 
     public double cost() {
-        return .20 + beverage.cost();
+        return DrinkSize.getCostBySize(beverage);
     }
 }

@@ -1,10 +1,12 @@
 package Chapter_03_DECORATOR.StarBuzz.CondimentDecorators;
 
 import Chapter_03_DECORATOR.StarBuzz.Beverages.Beverage;
+import Chapter_03_DECORATOR.StarBuzz.Beverages.DrinkSize;
+
 
 public class SteamedMilk extends CondimentDecorator {
     Beverage beverage;
-    
+
     public SteamedMilk(Beverage beverage) {
         this.beverage = beverage;
     }
@@ -14,6 +16,7 @@ public class SteamedMilk extends CondimentDecorator {
     }
 
     public double cost() {
-        return .10 + beverage.cost();
+        return DrinkSize.getCostBySize(beverage);
+
     }
 }

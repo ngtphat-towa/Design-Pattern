@@ -1,6 +1,8 @@
 package Chapter_03_DECORATOR.StarBuzz.CondimentDecorators;
 
 import Chapter_03_DECORATOR.StarBuzz.Beverages.Beverage;
+import Chapter_03_DECORATOR.StarBuzz.Beverages.DrinkSize;
+
 
 public class Whip extends CondimentDecorator {
     Beverage beverage;
@@ -14,6 +16,7 @@ public class Whip extends CondimentDecorator {
     }
 
     public double cost() {
-        return .10 + beverage.cost();
+        return DrinkSize.getCostBySize(beverage);
+
     }
 }
