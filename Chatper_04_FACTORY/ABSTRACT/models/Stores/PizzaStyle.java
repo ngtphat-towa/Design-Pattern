@@ -1,4 +1,4 @@
-package Chatper_04_FACTORY.METHOD.models.Pizza;
+package Chatper_04_FACTORY.ABSTRACT.models.Stores;
 
 public enum PizzaStyle {
     NewYork, Chicago, California
